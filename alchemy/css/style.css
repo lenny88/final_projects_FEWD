@@ -1,0 +1,921 @@
+/*
+Project Name: Final Project FEWD 2016
+Author: Lenny Cendrawasih
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #f0efef;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Droid Serif', serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+body, html{
+margin:0px
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 75%;
+  color: #f7cac9;
+  font-size: 6em;
+  font-weight: 100;
+  font-family: 'Alex Brush', cursive;
+}
+
+h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #414042;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'Droid Serif';
+}
+
+h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #414042;
+}
+
+p{
+  font-family: 'Droid Serif';
+  font-style: italic;
+  /*font-family: 'Open Sans';*/
+  font-size: .8em;
+  line-height: 180%;
+  font-weight: 100;
+  color: #6a6a6a
+}
+
+a           {color: #58595b; text-decoration: none; transition: .4s;}
+/*a:link      {color: grey; }*/
+a:hover     {color: black;   font-weight: bolder;}
+
+/*a:active    {color: yellow; }
+a:visited   {color: blue; }*/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container2 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container3 {
+  width: 50%;
+  margin: 0 auto;
+}
+.container4 {
+  width: 65%;
+  margin: 0 auto;
+}
+
+header{
+  padding-top: 2em;
+  /*padding-bottom: 1em;*/
+  min-width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+header.sticky{
+  background-color: white;
+  opacity: 0.9;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  position: fixed;
+  transition: all .5s ease;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: ease;
+  animation-name: jello;
+
+}
+
+.logo{
+  position: absolute;
+  font-size: 4.5em;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  /*margin-left: .5em;*/
+  /*color: #58595b;*/
+  color: black;
+  top: 0;
+  font-family: 'Alex Brush', cursive;
+  float: left;
+  margin: 0;
+}
+
+h1#firstHeading.firstHeading{
+  color: #414042;
+  font-size: 3em;
+  overflow: hidden;
+}
+
+header ul{
+  /*letter-spacing: 0.3em;*/
+  text-indent: 0.8em;
+  text-transform: uppercase;
+  right: 0;
+  display: inline-block;
+  float: right;
+  color: white;
+  font-family: 'Droid Serif';
+}
+
+.nav li{
+  display: inline-block;
+  /*top: 2em;
+  padding-bottom: 2.5em;*/
+}
+
+.hero{
+  width: 100%;
+}
+
+.about-left{
+  width: 50%;
+  float: left;
+  margin-top : 5em;
+  padding-right: 2em;
+}
+
+.about-right{
+  background: url(../images/human.jpg) no-repeat top right;
+  background-size: cover;
+  float: right;
+  min-width: 50%;
+  min-height: 300px;
+  margin: 5em 0;
+}
+
+#square-img{
+  height: 100%auto;
+}
+.square1{
+  float:left;
+	width:32.666%;
+  margin-right: 1%;
+  height: auto;
+  margin-bottom: 3em;
+  clear: both;
+}
+
+.square1:hover{
+animation-duration: 1s;
+animation-timing-function: ease;
+animation-fill-mode: ease;
+animation-name: tada;
+box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+
+.square2:hover{
+animation-duration: 1s;
+animation-timing-function: ease;
+animation-fill-mode: ease;
+animation-name: tada;
+box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+
+}
+
+.square3:hover{
+animation-duration: 1s;
+animation-timing-function: ease;
+animation-fill-mode: ease;
+animation-name: tada;
+box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+
+}
+
+.square2{
+  float: left;
+	width:32.666%;
+  margin-right: 1%;
+  height: auto;
+  margin-bottom: 3em;
+}
+
+.square3{
+  float:left;
+	width:32.666%;
+  height: auto;
+  margin-bottom: 3em;
+}
+
+#service{
+  /*padding-top: 5em;*/
+  padding-bottom: 3em;
+  margin-top: 20em;
+  margin: 0auto;
+  align-items: center;
+  clear: both;
+  position: relative;
+}
+
+.service1{
+  float:left;
+	width:22.5%;
+  margin-bottom: 4em;
+  margin-right: 3.333%;
+  overflow: hidden;
+  position: relative;
+}
+
+.service2{
+  float:left;
+	width:22.5%;
+  margin-right: 3.333%;
+  overflow: hidden;
+}
+
+.service3{
+  float:left;
+	width:22.5%;
+  margin-right: 3.333%;
+  overflow: hidden;
+}
+
+.service4{
+  float:left;
+	width:22.5%;
+  overflow: hidden;
+}
+
+.icon1{
+  background: url(../images/cakeicon) no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 70px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.fa-birthday-cake{
+  color: #FFE1A0;
+}
+
+.fa-fort-awesome{
+  color: #FFB5B6;
+}
+
+.fa-heart{
+  color:#81E4E8;
+}
+
+.fa-users{
+  color: #91E8C7
+}
+
+.fa-facebook-square{
+  color:white;
+}
+
+.fa-facebook-square:hover {
+    color: #3b5998;
+}
+
+.fa-twitter-square{
+  color:white;
+}
+
+.fa-twitter-square:hover {
+    color: #0084b4;
+}
+
+.fa-birthday-cake, .fa-fort-awesome, .fa-heart, .fa-users{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  animation-duration: 1.4s;
+  /*animation-timing-function: ease;*/
+  animation-iteration-count: infinite;
+  /*animation-delay: 3s;*/
+  /*animation-fill-mode: ease;*/
+  animation-name: swing;
+}
+
+.fa-birthday-cake{
+  animation-delay: .3s;
+}
+
+.fa-heart{
+  animation-delay: .3s;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    top: 10;
+  }
+  100% {
+    top: 100;
+  }
+}
+
+#promotion{
+  background: url(../images/huge.jpg) no-repeat top center;
+  clear: both;
+  height: 30em;
+  width: 100%auto;
+  color: white;
+  padding-top: 6em;
+  padding-left: 0;
+  margin-left: 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.promotion-box{
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 4em 0;
+  background: white;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#menu{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: white;
+  padding-top: 20px;
+  margin: 0;
+}
+
+#menu h1{
+  margin-top: .4em;
+}
+
+.menu1{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/cremebrulee.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu1, .menu2, .menu3, .menu4, .menu5, .menu6, .menu7, .menu8{
+  transition: all 0.2s ease;
+}
+
+.menu1:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu2:hover {
+  transform: rotate(10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu3:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu4:hover {
+  transform: rotate(10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu5:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu6:hover {
+  transform: rotate(10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu7:hover {
+  transform: rotate(-10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+.menu8:hover {
+  transform: rotate(10deg);
+  box-shadow: 0px 12px 25px 5px rgba(181,181,181,1);
+}
+
+
+
+
+.menu2{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/mousse.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu3{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/peachmelba.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu4{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  background: url(../images/praline.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu5{
+  margin-top: 2em;
+  margin-bottom: 5em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/crepes.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu6{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/macaroons.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu7{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  margin-right: 1.5%;
+  background: url(../images/operacake.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+.menu8{
+  margin-top: 2em;
+  width:23.875%;
+  height: 250px;
+  background: url(../images/eclair.jpg) no-repeat bottom center;
+  background-size: cover;
+  float: left;
+}
+
+#location{
+  background-color: #CCC;
+  padding: 5em 3em;
+  clear: both;
+  background: url(../images/plain.jpg) no-repeat top left;
+  background-size: cover;
+}
+
+.location-box{
+  width: 30%;
+  padding: 2em;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact{
+  height: auto;
+  background-color: white;
+  padding: 4em 2em;
+  margin-top: 30px;
+  clear: both;
+}
+
+.map-container{
+  width: 100%auto;
+  height: 500px;
+  position: relative;
+}
+
+#map{
+  width: 60%;
+  height: 100%;
+  background-size: cover;
+  float: left;
+  clear: both;
+  margin-top: 0;
+  position: relative;
+}
+
+.contact-form{
+  width: 40%;
+  padding-left: 2.5em;
+  float: right;
+  text-align: left;
+}
+
+form h2{
+  font-size: 2em;
+  padding-top: 0;
+}
+
+form p{
+  font-size: .8em;
+  line-height: 200%;
+}
+
+input, select {
+  float: left;
+  padding-left: .8em;
+  padding-top: .2em;
+  width: 100%;
+  min-height: 4em;
+  margin-top: .8em;
+  margin-bottom: 1em;
+  border: 1.5px solid #CCC;
+  color: black;
+}
+
+textarea, select{
+  width: 100%;
+  min-height: 15em;
+  border: 1.5px solid #CCC;
+  padding-left: .8em;
+  padding-top: 1em;
+  margin-top: .8em;
+  margin-bottom: 1em;
+  overflow: auto;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #262626;
+  color: white;
+  float: right;
+  width: 30%;
+}
+
+#carouselButtons {
+    margin-left: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.btn {
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+  margin: auto;
+  transition-duration: 0.5s;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #f7cac9;
+  color: white;
+}
+
+footer h1{
+  color: white;
+  font-size: 5em;
+}
+
+footer p{
+  color: white;
+}
+
+footer h2{
+  color: white;
+  font-size: 1.4em;
+  padding: .5em;
+}
+
+footer{
+  /*background-color: rgba(35, 32, 32, 0.8);*/
+  height: auto;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 9em;
+  padding-bottom: 9em;
+  font-size: 0.8em;
+  background:
+  linear-gradient(
+      rgba(35, 32, 32, .7),
+      rgba(247, 202, 201, .9)
+    ),
+  url(../images/wedding.jpg)bottom no-repeat;
+  background-size: cover;
+}
+.email-box{
+  width: 60%;
+  margin: auto;
+}
+
+footer input{
+  float: left;
+  padding-left: .8em;
+  padding-top: .2em;
+  width: 80%;
+  min-height: 4em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  border: 1.5px solid #CCC;
+  color: black;
+}
+
+footer input[type=submit] {
+  background-color: #f7cac9;
+  float: right;
+  width: 20%;
+  border: #f7cac9;
+}
+
+input:focus {
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+footer .subscribe-btn {
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+  transition-duration: 0.5s;
+  text-transform: uppercase;
+  background: url(../images/send.png) no-repeat center;
+  background-size: 30%auto;
+}
+
+footer .subscribe-btn:hover {
+  background-color: lightpink;
+  color: white;
+}
+
+.social-icons{
+  width: 50%;
+  clear: both;
+  margin: auto;
+  padding-top: 2em;
+  margin-bottom: 2em;
+}
+
+.social-icons ul{
+  margin:auto;
+  clear: both;
+  padding: 0;
+}
+
+.social-icons ul li{
+  display: inline-block;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 1em;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .logo{
+  visibility: hidden;
+  }
+
+  .container2{
+    width: 80%;
+  }
+
+
+  .nav{
+    float: left;
+    /*left: 50%;*/
+  }
+
+  .about-left, .about-right{
+    width: 100%;
+  }
+  .about-right{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .square1, .square2, .square3{
+  }
+  /*.service1, .service2, .service3, .service4{
+    width: 50%;
+    margin-right: 0;
+    float: left;
+  }*/
+
+  .service1, .service2, .service3, .service4{
+    width:48%;
+    margin-right:0;
+    float: left;
+  }
+
+  .service2, .service4{
+    float: right;
+  }
+
+  .service3{
+    float: left;
+    clear: both;
+  }
+
+  .service3, .service4{
+    margin-bottom: 70px;
+  }
+
+  div.service1{
+    margin-bottom: 0;
+  }
+  header ul{
+    margin: 0 auto;
+  }
+
+  .menu1, .menu2{
+    margin-top: 50px;
+    width: 50%;
+    background-position: top;
+    background-size: cover;
+    min-height: 300px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .menu1{
+    float: left;
+  }
+  .menu2{
+    float: right;
+  }
+  .menu3, .menu5, .menu7{
+    width: 50%;
+    float: left;
+    background-position: top;
+    background-size: cover;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    min-height: 300px;
+  }
+  .menu4, .menu6, .menu8{
+    width: 50%;
+    float: right;
+    background-position: top;
+    background-size: cover;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    min-height: 300px;
+  }
+
+  .menu7, .menu8{
+    margin-bottom:50px;
+  }
+
+  .location-box{
+    width: 80%;
+  }
+  #map{
+    width: 100%;
+  }
+
+  #contact, #menu{
+    margin-top: 0;
+  }
+
+  #menu h1{
+    margin-top: 0;
+  }
+
+  .contact-form{
+    width: 100%;
+    padding-left: 0;
+    padding-top: 60px;
+  }
+  footer form{
+    width: 100%;
+  }
+
+  .email-box{
+    width: 100%;
+    margin: auto;
+  }
+
+  h1{
+    top:0;
+  }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+.container2{
+  width: 100%;
+  margin: 0 auto;
+}
+.square1, .square2, .square3{
+  width: 90%;
+}
+.service1, .service2, .service3, .service4{
+  width: 80%;
+  margin: auto;
+  clear: both;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.menu1, .menu2, .menu3, .menu4, .menu5, .menu6, .menu7, .menu8{
+  width: 100%;
+}
+
+.location-box{
+  width: 100%;
+}
+
+#map{
+  width: 100%;
+}
+
+#contact{
+  padding: 0;
+}
+
+.contact-form{
+  padding: 20px;
+}
+
+.container-fluid{
+  width: 100%;
+}
+
+.map-container{
+  width: 100%;
+}
+footer{
+  width: 100%;
+}
+.email-box{
+  width: 100%;
+}
+
+.container3{
+  width: 80%;
+}
+
+
+
+}
+
+
+
+
+
+/*$(window).on('resize', function(e)
+e.preventDefault();
+var width = $(window).width();
+
+if (width<768) {
+  $('.logo').hide();
+else if (width >768){
+  $('.logo').show();
+else alert('Do nothing');
+}
+}
+)// on*/
